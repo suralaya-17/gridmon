@@ -171,7 +171,7 @@
                 <label class="block font-semibold text-gray-700">Bay</label>
                 <select name="bay" required class="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                   <option value="">-- Pilih Bay --</option>
-                  <optgroup label="500kV">
+                  <optgroup label="500KV">
                     <option value="GT#1">GT#1</option>
                     <option value="GT#2">GT#2</option>
                     <option value="GT#3">GT#3</option>
@@ -186,7 +186,7 @@
                     <option value="JAWA 9&10 #1">JAWA 9&10 #1</option>
                     <option value="JAWA 9&10 #2">JAWA 9&10 #2</option>
                   </optgroup>
-                  <optgroup label="150kV">
+                  <optgroup label="150KV">
                     <option value="SST#1">SST#1</option>
                     <option value="SST#2">SST#2</option>
                     <option value="SST#3">SST#3</option>
@@ -237,7 +237,7 @@
                   <input type="text" step="0.01" name="daya_reaktif" required inputmode="numeric" class="w-full p-2 border border-gray-300 rounded-md bg-white text-gray-800 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-500">
                 </div>
                 <div class="space-y-2">
-                  <label class="block font-semibold text-gray-700">Voltage (kV)</label>
+                  <label class="block font-semibold text-gray-700">Voltage (KV)</label>
                   <input type="text" step="0.01" name="tegangan" required inputmode="numeric" class="w-full p-2 border border-gray-300 rounded-md bg-white text-gray-800 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-500">
                 </div>
               </div>
@@ -325,7 +325,7 @@
                     <th class="px-4 py-3 font-medium">Current (A)</th>
                     <th class="px-4 py-3 font-medium">Power (MW)</th>
                     <th class="px-4 py-3 font-medium">MVAR</th>
-                    <th class="px-4 py-3 font-medium">Voltage (kV)</th>
+                    <th class="px-4 py-3 font-medium">Voltage (KV)</th>
                     <th class="px-4 py-3 font-medium">Action</th>
                   </tr>
                 </thead>
@@ -1050,7 +1050,7 @@
         'Current (A)': item.arus,
         'Power (MW)': item.daya,
         'Reactive Power (MVAR)': item.daya_reaktif,
-        'Voltage (kV)': item.tegangan
+        'Voltage (KV)': item.tegangan
       }));
       
       if (formattedData.length === 0) {
