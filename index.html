@@ -227,7 +227,10 @@
                 </div>
                 <div class="space-y-2">
                   <label class="block font-semibold text-gray-700">Power (MW)</label>
-                  <input type="number" step="0.01" name="daya" required inputmode="decimal" class="w-full p-2 border border-gray-300 rounded-md">
+                  <input type="text" name="daya" required
+                    inputmode="decimal"
+                    pattern="-?[0-9]*[.,]?[0-9]*"
+                    class="w-full p-2 border border-gray-300 rounded-md">
                 </div>
               </div>
 
