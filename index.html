@@ -473,7 +473,7 @@
     // --- Data Fetching from Server ---
     async function fetchData() {
         try {
-            const response = await fetch(API_BASE_URL);
+            const response = await fetch(`${API_BASE_URL}/get_data.php`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
