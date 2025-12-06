@@ -471,22 +471,18 @@
     }
 
     // --- Data Fetching from Server ---
-    async function fetchData() {
-        try {
-            const response = await fetch(`${API_BASE_URL}/get_data.php`);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            dataBeban = await response.json();
-            updateFilterDropdowns();
-            applyFilters(); // Perbarui tabel setelah data dimuat
-            updateChart(DOMElements.filterBay.value); // Perbarui grafik setelah data dimuat
-            // showToast('Data berhasil dimuat dari server.', 'success'); // Bisa diaktifkan jika perlu notifikasi setiap kali data dimuat
-        } catch (error) {
-            console.error('Error fetching data:', error);
-            showToast('Gagal memuat data dari server.', 'error');
-        }
-    }
+   async function fetchData() {
+       try {
+           const response = await fetch(`${API_BASE_URL}/get_data.php`);
+           const data = await response.json();
+           loadTableData(data);
+           updateCharts(data);
+       } catch (error) {
+           console.error(error);
+           showToast("Gagal memuat data dari server!", "error");
+       }
+   }
+
 
     // --- Form Handling ---
     async function handleFormSubmit(e) {
