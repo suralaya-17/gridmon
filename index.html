@@ -516,13 +516,12 @@
       }
 
       try {
-          const response = await fetch(url, {
-              method: method,
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(newData),
+          const response = await fetch(`${API_BASE_URL}/save_data.php`, {
+             method: "POST",
+             headers: { "Content-Type": "application/json" },
+             body: JSON.stringify(newData),
           });
+
 
           const result = await response.json();
 
